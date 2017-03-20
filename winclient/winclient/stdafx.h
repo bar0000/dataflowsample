@@ -10,6 +10,12 @@
 #include <stdio.h>
 #include <tchar.h>
 
+#include <iostream>
+#include <string>
+#include <sstream>
+#include <algorithm>
 
 
 // TODO: プログラムに必要な追加ヘッダーをここで参照してください
+#include "rediscli/rediscli.h"
+

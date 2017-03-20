@@ -1,0 +1,53 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>redis test</title>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">></script>
+  
+</head>
+
+<body>
+
+<form action="javascript:show()" onsubmit="">
+<input type="submit" value="show">
+</form>
+
+<hr>
+<div id="jsonTable"></div>
+<br>
+
+<script type="text/javascript">
+<!--
+jsonTable = null;
+ 
+function clear() {
+  $("#jsonTable").empty();
+}
+
+function show()
+{
+  clear();
+
+  $.ajax({
+    type: "GET",
+    url: "http://54.92.96.142:8081/getJsonp",
+    dataType: "jsonp",
+    success: function(json) {
+      var str = JSON.stringify(json.records);
+      $("#jsonTable").append(str);
+    },
+    error: function() {
+      alert("error");
+    }
+  });
+}
+
+-->
+</script>
+<noscript>
+  javascriptを有効にしてください
+</noscript>
+
+</body>
+
+</html>
